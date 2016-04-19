@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+  <title>Text Inspectors</title>
+</head>
+<body>
+  
+   <h1>World Central</h1>
+   <h2>Sumit text for inspection</h2>
+
+   <form action= "/text_inspections" method = "POST">
+     <div>
+     	<label for="/text_inspection_user_text"></label>
+         <textarea rows="10" cols="40" name="text_inspection[user_text]" id="/text_inspection_user_text" placeholder="Write a text"></textarea>
+         <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token %>">
+     </div>
+     <p><button type="submit">Inspections</button></p>
+   </form>
+</body>
+</html>

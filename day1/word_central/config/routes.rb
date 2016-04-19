@@ -1,35 +1,10 @@
 Rails.application.routes.draw do
 
-# two argumentos string, hash
-#         site es de controler name y home es la accion    
 get "/", to: "site#home"
-# get "/", :to => "site#home"
-# get "/", to => "sitehome"
-#todos estos son lo mismo
-#
-
-get "/contact", to: "site#contact"
-# get "/", :to => "site#home"
-# get "/", to => "sitehome"
-#todos estos son lo mismo
-#
-get "/say_name/:name", to: "site#say_name"
-
-get "/calculator", to: "site#calculator"
-
-post "/calculator", to: "site#calculator"
-
-get "/projects/index", to: "projects#index"
+get "/text_inspections/new", to: "text_inspections#new"
+post "/text_inspections", to: "text_inspections#create"
+get "/results", to:"text_inspections#results"
 end
-
-
-
-
-
-
-
-
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

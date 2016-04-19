@@ -1,0 +1,14 @@
+<h1>Results</h1>
+
+
+
+<h3><p>Input Text: <%= @text %></p></h3>
+<h3>YOU ARE ABLE TO READ THIS IN:</h3>
+<h1><%= @minute.round(3) %></h1>
+<h1>Minutes</h1>
+ <% @hashcounter.each do |auxarray|%>
+          <%=auxarray[0]%>
+          <p><%=auxarray[1]%></p>
+ <%end%>
+
+<a href="/">Back to Home</a>

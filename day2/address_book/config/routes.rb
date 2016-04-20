@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+
+get "/", to: "contact#index"
+get "/new", to: "contact#new"
+post "/new_contact", to: "contact#new_contact"
+get "/contact_info/:id", to: "contact#show"
+
+end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -53,4 +61,4 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
-end
+

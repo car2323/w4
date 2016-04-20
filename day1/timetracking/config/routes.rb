@@ -20,6 +20,11 @@ get "/calculator", to: "site#calculator"
 post "/calculator", to: "site#calculator"
 
 get "/projects/index", to: "projects#index"
+
+get "/projects/new", to: "projects#new"
+get "/projects/:id", to: "projects#show"
+post "/projects", to: "projects#create"
+
 end
 
 

@@ -1,5 +1,5 @@
 <ul>
 	<% @projects.each do |project|%>
-    <li> <%= project.name%> </li>
+    <a href="/projects/<%=project.id%>"><li> <%= project.name%> </li></a>
     <%end%>
 </ul>

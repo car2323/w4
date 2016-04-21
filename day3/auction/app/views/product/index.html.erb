@@ -1,0 +1,12 @@
+<h1>index</h1>
+<h1>Products</h1>
+<ul> 
+	<% @products.each do |list_products| %>
+  <li>
+  	<p><%= list_products.title %></p>
+  	<!--<p><%= list_products.description %></p>
+  	<%= list_products.deadline %>-->
+  </li>
+<%end%>
+</ul>
+<a href="/product/new">Add new product</a>

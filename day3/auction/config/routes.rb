@@ -1,45 +1,18 @@
 Rails.application.routes.draw do
 
-# two argumentos string, hash
-#         site es de controler name y home es la accion    
-get "/", to: "site#home"
-# get "/", :to => "site#home"
-# get "/", to => "sitehome"
-#todos estos son lo mismo
-#
 
-get "/contact", to: "site#contact"
-# get "/", :to => "site#home"
-# get "/", to => "sitehome"
-#todos estos son lo mismo
-#
-get "/say_name/:name", to: "site#say_name"
+get "/", to: "product#index"
+get "/product/new", to: "product#new"
 
-get "/calculator", to: "site#calculator"
 
-post "/calculator", to: "site#calculator"
+# get "/projects/:id", to: "projects#show"
+ post "/products", to: "product#create"
 
-get "/projects/index", to: "projects#index"
+# get "/projects/:project_id/time_entries", to: "time_entries#index"
 
-get "/projects/new", to: "projects#new"
-get "/projects/:id", to: "projects#show"
-post "/projects", to: "projects#create"
 
-get "/projects/:project_id/time_entries", to: "time_entries#index"
-
-get "/projects/:project_id/time_entries/new", to: "time_entries#new"
-post "/projects/:project_id/time_entries", to: "time_entries#create", as: :project_time_entries
 
 end
-
-
-
-
-
-
-
-
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -95,3 +68,4 @@ end
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+

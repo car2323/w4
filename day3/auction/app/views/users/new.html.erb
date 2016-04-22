@@ -1,0 +1,20 @@
+<%if @my_user.errors.any?%>
+  <ul>
+   <% @my_user.errors.full_messages.each do |error_msg| %>
+     <li><%= error_msg %></li>
+   <% end %>
+   </ul>
+<%end%>
+
+<h1>Add a New User</h1>
+<!--                  , @my_product-->
+<%= form_for [@my_user] do |f|%>
+	 <%= f.label :name%>
+	 <%= f.text_field :name%>
+
+	 <%= f.label :email%>
+	 <%= f.text_field :email%>
+
+	 <%= f.button%>
+<%end%>
+<a href="/products">Back to List Products</a>

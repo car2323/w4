@@ -24,3 +24,9 @@ TimeEntry.create(project: row2, hours:1, minutes:0, comment:"ninguno 2do project
 TimeEntry.create(project: row3, hours:4, minutes:30, comment:"ninguno 3er project", date:Time.now - 12.hours)
 TimeEntry.create(project: row1, hours:3, minutes:15, comment:"ninguno 1er project 2", date:Time.now - 1.hours)
 TimeEntry.create(project: row1, hours:6, minutes:45, comment:"ninguno 1er project 3", date:Time.now - 12.hours)
+
+[*1..100].each do |num|
+	 p= Project.new(name: "Project number #{num}", description: "Description for project number #{num}")
+     p.save
+     p.time_entries.create(hours: num, minutes: (rand * 11).floor, date: Date.current + num.hours)
+end

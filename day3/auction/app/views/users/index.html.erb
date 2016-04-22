@@ -1,0 +1,13 @@
+<h1>Users</h1>
+<h1>To create a Product Select your user first</h1>
+<ul> 
+	<% @users.each do |list_users| %>
+  <li>             
+  	<a href="/users/<%=list_users.id%>/products/new"><p><%= list_users.name %>
+  	<%= list_users.email %>
+  	</p>
+  </a>
+  </li>
+<%end%>
+</ul>
+<a href="/products">Back to List Products</a>

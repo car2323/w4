@@ -1,0 +1,11 @@
+<h1>index</h1>
+<h1>Products</h1>
+<ul> 
+	<% @products.each do |one_product| %>
+  <li>
+  	<p><a href="/products/<%=one_product.id%>"><%= one_product.title %></a></p>
+  </li>
+<%end%>
+</ul>
+<p><a href="/users/">Add new product</a></p>
+<a href="/users/new">Create New User</a>

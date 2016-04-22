@@ -1,20 +1,5 @@
-<%if @my_entry.errors.any?%>
-  <ul>
-   <% @my_entry.errors.full_messages.each do |error_msg| %>
-     <li><%= error_msg %></li>
-   <% end %>
-   </ul>
-<%end%>
 
-<%= form_for [@my_project, @my_entry] do |f| %>
-    <%= f.label :hours %>
-    <%= f.text_field :hours, size: 4%>
-    <br>
-    <%= f.label :minutes %>
-    <%= f.text_field :minutes, size: 4 %>
-    <br>
-    <%= f.label :date %>
-    <%= f.date_field :date, size: 4 %>
-    <br>
-    <%= f.submit "save"%>
-<%end%>
+<h2>Creating as new time entry in <%=@my_project.name%>Project</h2>
+
+<%=render "form" %>
+

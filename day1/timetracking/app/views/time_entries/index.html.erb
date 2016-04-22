@@ -1,10 +1,11 @@
-<h1><%= @my_project.name%></h1>
+<h1>Entries</h1>
 <ul> 
 	<% @my_entries.each do |entry| %>
   <li>
   	<%= entry.hours %>h
   	<%= entry.minutes %>m-
   	<%= entry.date %>
+  	<%= link_to("Delete", project_time_entry_path(@my_project, entry),method: :delete, data: {confirm: "are you sure"})%>
   </li>
 <%end%>
 </ul>

@@ -1,18 +1,33 @@
 Rails.application.routes.draw do
 
+    resources :users do
+      resources :products
+    end
+                      #, only: :index
+    resources :products do
+      resources :bids
+    end
+    resources :products do
+    end
+    resources :users do
+    end
 
-get "/", to: "product#index"
-get "/product/new", to: "product#new"
+end
+
+
+
+
+#get "/", to: "product#index"
+#get "/product/new", to: "product#new"
 
 
 # get "/projects/:id", to: "projects#show"
- post "/products", to: "product#create"
+#post "/products", to: "product#create"
 
 # get "/projects/:project_id/time_entries", to: "time_entries#index"
 
 
 
-end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

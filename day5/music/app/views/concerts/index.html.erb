@@ -1,0 +1,11 @@
+<h1>index</h1>
+<h1>Concerts</h1>
+<ul> 
+	<% @concerts.each do |one_concert| %>
+  <li>
+  	<p><a href="/concerts/<%=one_concert.id%>"><%= one_concert.artist %></a></p>
+  </li>
+<%end%>
+</ul>
+<p></p>
+<a href="/concerts/new">Create New Concertr</a>

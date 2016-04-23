@@ -1,33 +1,15 @@
 Rails.application.routes.draw do
-  get "/users/:product_id/get_email", to: "users#get_email"
 
-    resources :users do
-      resources :products
-        resources :bids
+
+    resources :concerts do
     end
-                      #, only: :index
-    resources :products do
-      resources :bids
+    resources :comments do
     end
-    resources :products do
-    end
-    resources :users do
+
+    resources :concerts do
+      resources :comments
     end
 end
-
-
-
-
-#get "/", to: "product#index"
-#get "/product/new", to: "product#new"
-
-
-# get "/projects/:id", to: "projects#show"
-#post "/products", to: "product#create"
-
-# get "/projects/:project_id/time_entries", to: "time_entries#index"
-
-
 
 
   # The priority is based upon order of creation: first created -> highest priority.

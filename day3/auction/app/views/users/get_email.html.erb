@@ -1,0 +1,10 @@
+<h1>Enter your email:</h1>
+              <!--    , @my_bid, @my_product-->
+<%= form_for [@my_user, @my_bid, @my_product] do |f|%>
+	 <%= f.label :email%>
+	 <%= f.text_field :email%>
+     <%= f.label :product_id%>
+     <%= f.product.id%>
+     <%= f.label :amount%>
+	 <%= f.text_field :amount%>
+<%end%>

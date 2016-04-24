@@ -23,10 +23,4 @@ class UsersController < ApplicationController
             render "new"
          end
 	end
-	def get_email
-        @my_user = User.new
-        @my_bid = Product.find_by(id: params[:id])
-        @my_product = Bid.new
-        render "get_email"
-	end
 end

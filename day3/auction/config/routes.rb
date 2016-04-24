@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get "/users/:product_id/get_email", to: "users#get_email"
+  # get "/users/:product_id/get_email", to: "users#get_email"
+  # post "/users/:product_id/get_email", to: "user#get_email"
 
     resources :users do
       resources :products

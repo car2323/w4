@@ -1,11 +1,42 @@
-<h1>index</h1>
-<h1>Concerts</h1>
-<ul> 
-	<% @concerts.each do |one_concert| %>
-  <li>
-  	<p><a href="/concerts/<%=one_concert.id%>"><%= one_concert.artist %></a></p>
-  </li>
-<%end%>
-</ul>
-<p></p>
-<a href="/concerts/new">Create New Concertr</a>
+<head>
+   <meta charset="utf-8"/>
+   <link rel="stylesheet" href="/Users/CECG/Documents/ironhack/w3/day1/bootstrap/css/bootstrap.css">
+   <link rel="stylesheet" href="app/assets/stylesheets/concert.scss">
+</head>
+<body>
+  <div class="container index_concert">
+     <div class="row photogrande">
+        <img class="homelogo" src="top_photo.png"> 
+     </div>
+     <div class="row titlepage">
+        <h1 calss="text_title">
+           Concerts
+        </h1>
+     </div>
+     <div class= "row">
+       <div class="col-sm-3 listconcert">
+         <ul class="listconcerts"> 
+	         <% @concerts.each do |one_concert| %>
+             <li class="listconcerts">
+  	           <a class="listconcerts" href="/concerts/<%=one_concert.id%>"><%= one_concert.artist %></a>
+             </li>
+           <%end%>
+         </ul>
+       </div><!-- cierre primera columna con lista de conciertos-->
+        <div class="col-sm-5 centerconcert">
+
+
+
+
+        </div><!--center-->
+        <div class="col-sm-3 centerconcert">
+
+
+
+
+        </div><!--Derecha-->
+     <div class="button">
+         <a class="letterbutton"href="/concerts/new">Create New Concert</a>
+     </div>
+    </div> <!--cierre row contenedora list concert-->
+  </div><!--cierre class container-->

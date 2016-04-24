@@ -6,13 +6,17 @@ Rails.application.routes.draw do
       resources :products
         resources :bids
     end
-                      #, only: :index
-    resources :products do
-      resources :bids
-    end
-    resources :products do
-    end
+
     resources :users do
+    end
+    resources :products do
+    end
+    
+    resources :bids do
+    end
+
+    resources :products do #only: :index
+      resources :bids
     end
 end
 

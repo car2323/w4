@@ -1,12 +1,13 @@
 class BidsController < ApplicationController
 	def index
+		@my_bid = Bid.all
 	end
 	def show
 	end
 	def new
-		@my_user = User.find_by(id: params[:user_id]) #esto es para el formulario es como un metodo GET
-		@my_product = Product.find_by(id: params[:product_id])
-		@my_bid = User.new 
+		@my_user = User.new #esto es para el formulario es como un metodo GET
+		@my_product = Product.new
+		@my_bid = Bid.new 
 		render "new"
 	end
 	def create

@@ -1,0 +1,13 @@
+<h1>Add new Bid</h1>
+<%= form_for [@my_user,@my_product, @my_bid] do |f|%>
+	 <%= f.label :email%>
+	 <%= f.text_field :email%>
+
+	 <%= f.label :product_id%>
+	 <%= f.text_area :product_id%>
+
+	 <%= f.label :amount%>
+	 <%= f.date_field :amount%>
+
+	 <%= f.button%>
+<%end%>
